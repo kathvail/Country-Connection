@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Connection - Business Plan</title>
+    <style>
+        /* RESET & BASE STYLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Calibri', 'Arial', 'Segoe UI', sans-serif;
+            line-height: 1.5;
+            color: #2c2c2c;
+            background-color: #f5f3ef;
+            padding: 40px 20px;
+        }
+
+        /* MAIN CONTAINER - BOOK STYLE */
+        .book {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            padding: 50px 60px;
+            border-radius: 4px;
+        }
+
+        /* PRINT STYLES */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                margin: 0;
+            }
+            .book {
+                box-shadow: none;
+                padding: 0.5in;
+                max-width: 100%;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+            h1, h2, h3, h4 {
+                page-break-after: avoid;
+            }
+            table, tr, td, th {
+                page-break-inside: avoid;
+            }
+        }
+
+        /* TYPOGRAPHY */
+        h1 {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2d5a2c;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #d4c5a9;
+            padding-bottom: 20px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #5a4a2e;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: 22px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #3a6b35;
+            border-left: 4px solid #c49a6c;
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #4a7a45;
+        }
+
+        h4 {
+            font-size: 16px;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            color: #6b4c2c;
+        }
+
+        /* TABLES */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #e8e0d0;
+            border: 1px solid #c0b090;
+            padding: 10px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        td {
+            border: 1px solid #c0b090;
+            padding: 8px 10px;
+            vertical-align: top;
+        }
+
+        /* LISTS */
+        ul, ol {
+            margin: 15px 0 15px 25px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        /* QUOTES AND CALLOUTS */
+        .quote {
+            font-style: italic;
+            background-color: #f9f5ec;
+            padding: 15px 20px;
+            border-left: 4px solid #c49a6c;
+            margin: 20px 0;
+            color: #4a3a22;
+        }
+
+        .highlight {
+            background-color: #f0f0e0;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+
+        /* TABLES: special formatting for budgets */
+        .budget-table th,
+        .budget-table td {
+            text-align: right;
+        }
+
+        .budget-table th:first-child,
+        .budget-table td:first-child {
+            text-align: left;
+        }
+
+        /* FOOTER / PAGE NUMBERS for print */
+        .footer-note {
+            text-align: center;
+            font-size: 10px;
+            color: #888;
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+        }
+
+        /* TOC STYLES */
+        .toc {
+            margin: 30px 0;
+            background: #faf8f3;
+            padding: 20px;
+            border: 1px solid #e0d6c6;
+        }
+
+        .toc-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            font-size: 14px;
+            border-bottom: 1px dotted #ccc;
+        }
+
+        /* COVER PAGE */
+        .cover {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #d4c5a9;
+        }
+
+        .cover h1 {
+            border-bottom: none;
+            font-size: 36px;
+            margin-top: 40px;
+        }
+
+        .cover-logo {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 700px) {
+            .book {
+                padding: 20px;
+            }
+            table, thead, tbody, th, td, tr {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="book">
+
+    <!-- COVER PAGE -->
+    <div class="cover">
+        <div class="cover-logo">🌿</div>
+        <h1>COUNTRY CONNECTION</h1>
+        <p style="font-size: 20px; margin: 10px 0; color: #5a4a2e;">A Cultural Digital Detox Wellness Retreat <br> for Aboriginal Youth</p>
+        <p style="font-size: 16px; margin: 30px 0 10px;"><strong>Complete Business Plan</strong></p>
+        <p style="margin-top: 40px;">Prepared for: <u>[Band Council Name]</u></p>
+        <p>Prepared by: <u>[Your Name]</u></p>
+        <p>Date: <u>[Current Date]</u></p>
+        <p style="margin-top: 50px; font-size: 12px;">Version: Final</p>
+    </div>
+
+    <!-- TABLE OF CONTENTS -->
+    <h2>Table of Contents</h2>
+    <div class="toc">
+        <div class="toc-item"><span>Executive Summary</span><span>1</span></div>
+        <div class="toc-item"><span>Vision & Mission</span><span>3</span></div>
+        <div class="toc-item"><span>Community Context & Need</span><span>5</span></div>
+        <div class="toc-item"><span>Program Design & Philosophy</span><span>7</span></div>
+        <div class="toc-item"><span>Sample Daily Itinerary</span><span>10</span></div>
+        <div class="toc-item"><span>Organizational Structure</span><span>12</span></div>
+        <div class="toc-item"><span>Staffing Plan & Roles</span><span>14</span></div>
+        <div class="toc-item"><span>Location & Facilities</span><span>17</span></div>
+        <div class="toc-item"><span>Complete Cost Breakdown</span><span>19</span></div>
+        <div class="toc-item"><span>Funding Strategy & Grant Sources</span><span>22</span></div>
+        <div class="toc-item"><span>Sample Grant Application</span><span>25</span></div>
+        <div class="toc-item"><span>Proposal to Band Council</span><span>27</span></div>
+        <div class="toc-item"><span>Risk Management & Emergency Plan</span><span>29</span></div>
+        <div class="toc-item"><span>Required Forms & Agreements</span><span>32</span></div>
+        <div class="toc-item"><span>Staff Code of Conduct</span><span>35</span></div>
+        <div class="toc-item"><span>Evaluation & Outcomes</span><span>37</span></div>
+        <div class="toc-item"><span>Implementation Timeline</span><span>40</span></div>
+        <div class="toc-item"><span>Sustainability Plan</span><span>42</span></div>
+        <div class="toc-item"><span>Appendices</span><span>44</span></div>
+    </div>
+
+    <!-- ==================== SECTION 1 ==================== -->
+    <h2>1. Executive Summary</h2>
+    <h3>1.1 The Concept</h3>
+    <p><strong>Country Connection</strong> is a community-led, land-based wellness retreat for Aboriginal youth aged 13-18. The program combines a voluntary <strong>digital detox</strong> – a complete 5-day break from phones, social media, and screens – with immersive cultural learning led by Elders and Knowledge Keepers.</p>
+    <p><strong>The core insight:</strong> You cannot take something away without putting something better in its place. We replace digital distraction with connection to Culture, Country, and Community.</p>
+
+    <h3>1.2 The Problem Being Solved</h3>
+    <p>Aboriginal youth spend an average of <strong>6-9 hours per day</strong> on screens, leading to anxiety, depression, poor sleep, weakened cultural identity, and social isolation. Mainstream mental health services often fail to address these issues in culturally appropriate ways.</p>
+
+    <h3>1.3 Financial Summary</h3>
+    <table>
+        <thead><tr><th>Item</th><th>Amount</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Cost per retreat (15 youth)</td><td>$22,390</td></tr>
+            <tr><td>Cost per youth</td><td>Approx. $1,400</td></tr>
+            <tr><td>Annual goal (4 retreats)</td><td>$89,560</td></tr>
+            <tr><td>Request to Band Council</td><td>$0 (letter of support only)</td></tr>
+        </tbody>
+    </table>
+
+    <div class="highlight">
+        <p><strong>Key outcomes target:</strong> 90% complete full digital detox | 80% stronger cultural connection | 75% reduced stress | 85% would recommend to a friend</p>
+    </div>
+
+    <!-- ==================== SECTION 2 ==================== -->
+    <h2>2. Vision & Mission</h2>
+    <p><strong>Vision:</strong> A future where Aboriginal youth carry the strength of their culture into a balanced digital world.</p>
+    <p><strong>Mission:</strong> To empower Aboriginal youth by using cultural connection as the foundation for digital wellness, fostering resilience, identity, and community through land-based retreats led by Elders.</p>
+    <p><strong>Core Values:</strong> Community-Led, Culture as Healing, Strength-Based, Trauma-Informed, Safe & Respectful.</p>
+
+    <!-- ==================== SECTION 3 ==================== -->
+    <h2>3. Community Context & Need</h2>
+    <p>Research indicates 86% of Indigenous youth use social media daily, 60% feel anxious when separated from their phone, and 45% are online past midnight. Local yarning circles confirm the need:</p>
+    <div class="quote">"I know I'm on my phone too much, but when I try to stop, I don't know what else to do." — Girl, 15</div>
+    <div class="quote">"My culture feels far away. Like something I'm supposed to care about but don't really know." — Boy, 16</div>
+
+    <!-- ==================== SECTION 4 ==================== -->
+    <h2>4. Program Design & Philosophy</h2>
+    <h3>4.1 The Four Connections</h3>
+    <ul>
+        <li><strong>Connect to Self:</strong> Journaling, meditation, letter to future self</li>
+        <li><strong>Connect to Others:</strong> Traditional games, shared meals, teamwork</li>
+        <li><strong>Connect to Culture:</strong> Ceremony, storytelling, craft-making</li>
+        <li><strong>Connect to Country:</strong> Bush tucker walks, swimming, caring for Country</li>
+    </ul>
+    <h3>4.2 The Digital Detox Ceremony</h3>
+    <p>Youth voluntarily place devices in a decorated box during an opening ceremony led by Elders – transforming surrender from a loss into a commitment.</p>
+
+    <!-- ==================== SECTION 5 ==================== -->
+    <h2>5. Sample Daily Itinerary</h2>
+    <table>
+        <thead><tr><th>Time</th><th>Activity</th><th>Replaces</th></tr></thead>
+        <tbody>
+            <tr><td>7:00 AM</td><td>Sunrise reflection</td><td>Morning phone scroll</td></tr>
+            <tr><td>9:00 AM</td><td>Elder-led cultural activity</td><td>Gaming / social media</td></tr>
+            <tr><td>2:00 PM</td><td>Land-based learning</td><td>Passive screen time</td></tr>
+            <tr><td>8:00 PM</td><td>Yarning circle</td><td>Late-night screens</td></tr>
+            <tr><td>10:30 PM</td><td>Lights out</td><td>Bedtime phone checking</td></tr>
+        </tbody>
+    </table>
+
+    <!-- ==================== SECTION 6 ==================== -->
+    <h2>6. Organizational Structure</h2>
+    <p>Band Council (Oversight) → Elder's Council (Cultural Authority) → Retreat Director (Operations) → Cultural Mentors, Youth Workers, Coordinator, Cook, Mental Health (on-call).</p>
+    <p><strong>Decision-making:</strong> Elders have full authority over cultural protocols. Retreat Director handles logistics and grants. Major changes require Band Council approval.</p>
+
+    <!-- ==================== SECTION 7 ==================== -->
+    <h2>7. Staffing Plan & Roles</h2>
+    <table>
+        <thead><tr><th>Role</th><th>Number</th><th>Total per Retreat</th></tr></thead>
+        <tbody>
+            <tr><td>Elders (Cultural Lead)</td><td>1-2</td><td>$500-$1,000 honorarium</td></tr>
+            <tr><td>Cultural Mentors</td><td>2</td><td>$3,000</td></tr>
+            <tr><td>Retreat Coordinator</td><td>1</td><td>$2,800</td></tr>
+            <tr><td>Youth Workers</td><td>2</td><td>$2,500</td></tr>
+            <tr><td>Cook</td><td>1</td><td>$1,000</td></tr>
+            <tr><td>Mental Health (on-call)</td><td>1</td><td>$500 retainer</td></tr>
+        </tbody>
+    </table>
+    <p><strong>Staff-to-youth ratio:</strong> 1:3. All staff require Mental Health First Aid, CPR, background checks, and trauma-informed training.</p>
+
+    <!-- ==================== SECTION 8 ==================== -->
+    <h2>8. Location & Facilities</h2>
+    <p><strong>Requirements:</strong> On or near traditional lands, within 2 hours of community, safe drinking water, basic shelter, emergency vehicle access.</p>
+    <p><strong>Estimated site prep:</strong> $2,400 – $3,400 per retreat (rental, toilets, firewood, tarps, lanterns).</p>
+
+    <!-- ==================== SECTION 9 ==================== -->
+    <h2>9. Complete Cost Breakdown</h2>
+    <table>
+        <thead><tr><th>Category</th><th>Cost per Retreat</th><th>Annual (4 retreats)</th></tr></thead>
+        <tbody>
+            <tr><td>Personnel</td><td>$10,800</td><td>$43,200</td></tr>
+            <tr><td>Food & Supplies</td><td>$1,950</td><td>$7,800</td></tr>
+            <tr><td>Program Materials</td><td>$1,105</td><td>$4,420</td></tr>
+            <tr><td>Venue & Facilities</td><td>$2,500</td><td>$10,000</td></tr>
+            <tr><td>Transportation</td><td>$1,400</td><td>$5,600</td></tr>
+            <tr><td>Safety & Admin</td><td>$1,600</td><td>$6,400</td></tr>
+            <tr><td>Contingency (10%)</td><td>$2,035</td><td>$8,140</td></tr>
+            <tr style="background:#e8e0d0;"><td><strong>TOTAL</strong></td><td><strong>$22,390</strong></td><td><strong>$89,560</strong></td></tr>
+        </tbody>
+    </table>
+
+    <!-- ==================== SECTION 10 ==================== -->
+    <h2>10. Funding Strategy & Grant Sources</h2>
+    <p><strong>Youth pay nothing.</strong> Funding mix: 50-70% government grants, 20-30% foundations, 10-20% corporate sponsorships, plus Band in-kind support.</p>
+    <p><strong>Primary targets:</strong> Public Safety Canada (Crime Prevention Action Fund), Indigenous Services Canada (Mental Wellness), TELUS Friendly Future Foundation, MakeWay Foundation.</p>
+    <p><strong>What we ask from Band Council:</strong> Permission for Elder's Council, help identifying location, letter of support – <strong>$0 from Band operating budget.</strong></p>
+
+    <!-- ==================== SECTION 11 ==================== -->
+    <h2>11. Sample Grant Application</h2>
+    <p><strong>Project Summary (100 words):</strong> "Country Connection" is a 5-day cultural digital detox retreat for 15 Aboriginal youth (13-18) from [Community Name]. Youth voluntarily disconnect from phones and social media to immerse in Elder-led cultural activities on Country. The program addresses rising rates of anxiety and disconnection linked to screen addiction by replacing digital time with land-based learning, storytelling, and ceremony. Outcomes include strengthened cultural identity, reduced digital dependency, and improved mental wellbeing.</p>
+    <p><strong>Budget requested:</strong> $22,390 for pilot retreat.</p>
+
+    <!-- ==================== SECTION 12 ==================== -->
+    <h2>12. Proposal to Band Council</h2>
+    <p><strong>Opening statement:</strong> "Thank you for the opportunity to present this proposal. We come before you with a vision to support the wellness of our youth, the future of our community. We seek your guidance, wisdom, and blessing to develop a retreat program that uses our cultural strengths to address a modern challenge: digital overload."</p>
+    <p><strong>Three asks:</strong> Blessing and guidance, formation of an Elder's Council, help identifying a location, a letter of support. <strong>Zero dollars requested from Band operating budget.</strong></p>
+
+    <!-- ==================== SECTION 13 ==================== -->
+    <h2>13. Risk Management & Emergency Plan</h2>
+    <table>
+        <thead><tr><th>Risk</th><th>Mitigation</th></tr></thead>
+        <tbody>
+            <tr><td>Youth injury</td><td>First aid trained staff, emergency plan, waivers</td></tr>
+            <tr><td>Emotional distress</td><td>Trauma-trained staff, 1:3 ratio, quiet space, on-call mental health</td></tr>
+            <tr><td>Severe weather</td><td>Indoor shelter plan, monitor forecasts, evacuation route</td></tr>
+            <tr><td>Missing youth</td><td>Regular headcounts, buddy system, search protocol</td></tr>
+        </tbody>
+    </table>
+
+    <!-- ==================== SECTION 14 ==================== -->
+    <h2>14. Required Forms & Agreements</h2>
+    <ul>
+        <li><strong>Device Agreement:</strong> Youth and parent sign voluntary tech handover.</li>
+        <li><strong>Photo Consent Form:</strong> Optional, for grant reporting and promotion.</li>
+        <li><strong>Registration Form:</strong> Medical info, emergency contacts, dietary needs.</li>
+        <li><strong>Waiver of Liability:</strong> Acknowledgment of risks.</li>
+    </ul>
+    <div class="highlight">
+        <p><strong>Key clause from Device Agreement:</strong> "By signing, I agree to give myself the gift of full presence."</p>
+    </div>
+
+    <!-- ==================== SECTION 15 ==================== -->
+    <h2>15. Staff Code of Conduct</h2>
+    <ul>
+        <li>Respect all cultural protocols as directed by Elders</li>
+        <li>Maintain confidentiality about youth disclosures</li>
+        <li>Model healthy digital behaviour (no phones during retreat)</li>
+        <li>Never be alone with a youth out of sight of others</li>
+        <li>Never use alcohol or drugs before or during retreat</li>
+    </ul>
+
+    <!-- ==================== SECTION 16 ==================== -->
+    <h2>16. Evaluation & Outcomes</h2>
+    <p><strong>Pre/Post Survey Questions:</strong> "I feel connected to my culture." "I feel stressed or worried most days." "I check my phone within 10 minutes of waking up."</p>
+    <p><strong>Long-term tracking:</strong> 3-month follow-up calls, 6-month mailed surveys.</p>
+
+    <!-- ==================== SECTION 17 ==================== -->
+    <h2>17. Implementation Timeline</h2>
+    <table>
+        <thead><tr><th>Phase</th><th>Months</th><th>Key Activities</th></tr></thead>
+        <tbody>
+            <tr><td>Setup</td><td>1-4</td><td>Council approval, Elder's Council, location, grants</td></tr>
+            <tr><td>Preparation</td><td>5-7</td><td>Staff, supplies, youth recruitment</td></tr>
+            <tr><td>Pilot Retreat</td><td>8</td><td>First 5-day retreat with 15 youth</td></tr>
+            <tr><td>Evaluation & Growth</td><td>9-12</td><td>Report, plan 3 more retreats for Year 2</td></tr>
+        </tbody>
+    </table>
+
+    <!-- ==================== SECTION 18 ==================== -->
+    <h2>18. Sustainability Plan</h2>
+    <ul>
+        <li><strong>Phase 1 (Year 1):</strong> Pilot retreat, grant-funded.</li>
+        <li><strong>Phase 2 (Years 2-3):</strong> 4 retreats annually, grants + sponsorships.</li>
+        <li><strong>Phase 3 (Year 4+):</strong> Community-run, adding paid retreats for non-Indigenous groups to cross-subsidize youth programs.</li>
+    </ul>
+
+    <!-- ==================== APPENDICES ==================== -->
+    <h2>Appendices</h2>
+    <h3>Appendix A: One-Page Summary for Band Council</h3>
+    <div class="highlight">
+        <p><strong>Country Connection – Cultural Digital Detox Retreat</strong><br>
+        <strong>What:</strong> 5-day land-based wellness retreat for Aboriginal youth (13-18)<br>
+        <strong>Why:</strong> Reduce anxiety, strengthen cultural identity, build resilience<br>
+        <strong>Cost to Band:</strong> $0<br>
+        <strong>We ask for:</strong> Elder's Council, location help, letter of support</p>
+    </div>
+
+    <h3>Appendix B: Parent Information Letter (template)</h3>
+    <div class="highlight">
+        <p>Dear Parent/Caregiver,<br><br>
+        Your child has been invited to participate in Country Connection — a free, 5-day cultural wellness retreat.<br><br>
+        <strong>The retreat is completely free.</strong> We provide transportation, all meals, supplies, and 24/7 supervision.<br><br>
+        <strong>What about phones?</strong> Youth voluntarily place devices into secure storage. No screens for 5 days.<br><br>
+        To register, contact: [Your Name], [Phone], [Email]</p>
+    </div>
+
+    <h3>Appendix C: Device Agreement (full text)</h3>
+    <div class="highlight">
+        <p><strong>COUNTRY CONNECTION DEVICE AGREEMENT</strong><br>
+        During the retreat, I voluntarily place my phone and devices into secure storage. I will not have access to screens for 5 days. Staff and Elders will support me. If I leave early to access my devices, my parent will be called to pick me up.<br>
+        Youth signature: ___________ Parent signature: ___________</p>
+    </div>
+
+    <h3>Appendix D: Equipment & Supplies Master List</h3>
+    <ul>
+        <li>Sleeping: 22 sleeping bags, 22 sleeping pads, 5-8 tents</li>
+        <li>Kitchen: 2 camp stoves, pots/pans, coolers, water containers</li>
+        <li>Safety: 2 first aid kits, satellite phone (if needed)</li>
+        <li>Activities: craft supplies, journals, traditional game equipment</li>
+        <li>General: lanterns, flashlights, tarps, rope</li>
+    </ul>
+
+    <h3>Appendix E: Glossary of Terms</h3>
+    <ul>
+        <li><strong>Country:</strong> Land, water, plants, animals, and spiritual connection</li>
+        <li><strong>Digital detox:</strong> Period of voluntarily abstaining from digital devices</li>
+        <li><strong>Honorarium:</strong> Payment recognizing value of traditional knowledge</li>
+        <li><strong>Yarning circle:</strong> Structured conversation where everyone speaks and listens in turn</li>
+    </ul>
+
+    <!-- CONCLUSION -->
+    <h2>Conclusion</h2>
+    <p>Country Connection is more than a retreat. It is an investment in the future of Aboriginal youth and the cultural strength of the community. By offering a supported digital detox grounded in cultural connection, the program addresses a pressing modern challenge using the most powerful tool available: the wisdom of Elders, the healing power of Country, and the resilience of community.</p>
+    <p>With your support, we can build something that outlasts any single grant or leader. Something that belongs to the community. Something that helps youth carry their strength beyond the screen.</p>
+
+    <div class="footer-note">
+        Prepared by: [Your Name] | Contact: [Phone Number] | [Email]<br>
+        Thank you for your commitment to our youth and our future.
+    </div>
+
+</div>
+</body>
+</html>
